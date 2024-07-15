@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs bar</title>
+</head>
+<body>
+
+<div class="link_tab">
+  <button class="button" onclick="openCity('tab1')">tab1</button>
+  <button class="button" onclick="openCity('tab2')">tab2</button>
+  <button class="button" onclick="openCity('tab3')">tab3</button>
+</div>
+
+<div id="tab1" class="tab1">
+  <span onclick="this.parentElement.style.display='none'"
+  class="button_rigth">&times;</span>
+  <h2>tab1</h2>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, molestias!</p>
+</div>
+
+<div id="tab2" class="tab1" style="display:none">
+  <span onclick="this.parentElement.style.display='none'"
+  class="button_rigth">&times;</span>
+  <h2>tab2</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, temporibus?.</p> 
+</div>
+
+<div id="tab3" class="tab1" style="display:none">
+  <span onclick="this.parentElement.style.display='none'"
+  class="button_rigth">&times;</span>
+  <h2>tab3</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, harum.</p>
+</div>
+
+<script>
+function openCity(cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(cityName).style.display = "block";  
+}
+</script>
+
+
+
+<script>
+
+function openTab(cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(cityName).style.display = "block";  
+}
+</script>
+
+
+</body>
+</html>
